@@ -8,6 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: |
+      - name: Confirm dispatch
+        run: |
           echo "Received dispatch event"
-          echo "Event type: ${{ github.event.action }}"## upon receiving repo dispatch from BioC package repo, clone, copy .nf files into subdirectory, and create pull request.
+
+      - name: Confirm payload
+        run: 
+          echo "Package: ${{ github.event.client_payload.package }}"
+          echo "Source repo: ${{ github.event.client_payload.source_repo }}"
+          echo "SHA: ${{ github.event.client_payload.sha }}"
+          echo "Event type: ${{ github.event.action }}"

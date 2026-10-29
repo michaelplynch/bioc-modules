@@ -1,0 +1,1 @@
+## upon receiving repo dispatch from BioC package repo, clone, copy .nf files into subdirectory, and create pull request.

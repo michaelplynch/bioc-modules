@@ -1,1 +1,13 @@
-## upon receiving repo dispatch from BioC package repo, clone, copy .nf files into subdirectory, and create pull request.
+name: Test repository_dispatch
+
+on:
+  repository_dispatch:
+
+jobs:
+  received:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo "Received dispatch event"
+          echo "Event type: ${{ github.event.action }}"## upon receiving repo dispatch from BioC package repo, clone, copy .nf files into subdirectory, and create pull request.

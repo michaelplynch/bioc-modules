@@ -2,7 +2,7 @@ name: Test repository_dispatch
 
 on:
   repository_dispatch:
-
+    types: [sync-module]
 jobs:
   received:
     runs-on: ubuntu-latest

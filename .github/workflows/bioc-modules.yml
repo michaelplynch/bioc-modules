@@ -13,7 +13,7 @@ jobs:
           echo "Received dispatch event"
 
       - name: Confirm payload
-        run: 
+        run: |
           echo "Package: ${{ github.event.client_payload.package }}"
           echo "Source repo: ${{ github.event.client_payload.source_repo }}"
           echo "SHA: ${{ github.event.client_payload.sha }}"

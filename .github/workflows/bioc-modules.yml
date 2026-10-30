@@ -39,8 +39,9 @@ jobs:
       - name: Copy files into bioc-modules
         run: |
           MODULE_DIR="bioc-modules/modules/${{ github.event.client_payload.package }}"
-
-          mkdir -p "$MODULE_DIR"
+          pwd
+          ls -la
+          mkdir -p "$MODULE_DIR/wrappers"
           rsync -av --delete \
             --include='*.nf' \
             ./wrappers/ \

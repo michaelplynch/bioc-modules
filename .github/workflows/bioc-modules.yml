@@ -44,7 +44,7 @@ jobs:
           mkdir -p "$MODULE_DIR/wrappers"
           rsync -av --delete \
             --include='*.nf' \
-            ./wrappers/ \
+            source-repo/wrappers/ \
             "$MODULE_DIR/"
 
       - name: Create metadata
